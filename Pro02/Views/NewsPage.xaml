@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.NewsPage"
+             Title="NewsPage">
+    <VerticalStackLayout>
+        <Grid HeightRequest="2000">
+            <StackLayout>
+                <Label Margin="20,30,20,25"
+              Text="Register"
+              FontSize="30"
+              FontAutoScalingEnabled="False"
+              VerticalOptions="Start"
+              HorizontalOptions="Center"/>
+                <Frame Margin="5" Padding="0"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   CornerRadius="75">
+                    <Image
+                    Aspect="Fill"
+                    Source="arm_muscle.png"/>
+                </Frame>
+
+                <Entry Margin ="20"
+                    IsSpellCheckEnabled="True"
+                    IsTextPredictionEnabled="True"
+                     ClearButtonVisibility="WhileEditing"
+                     WidthRequest ="200"
+                      Placeholder ="Username"/>
+                <Entry Margin ="20"
+                   MaxLength="10"
+                   IsPassword="True"
+                   IsSpellCheckEnabled="False"
+                   IsTextPredictionEnabled="False"
+                   WidthRequest ="200"
+                   Placeholder ="Password"/>
+                <Entry Margin ="20"
+                       MaxLength="10"
+                       IsPassword="True"
+                       IsSpellCheckEnabled="False"
+                       IsTextPredictionEnabled="False"
+                       WidthRequest ="200"
+                       Placeholder ="Confirm Password"/>
+                <Button Margin="10"
+                        Text="Register"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        x:Name="Regis"
+                        Clicked="Regis_Clicked"/>
+                <Button Margin="10"
+                        Text="Back"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        BackgroundColor="Gray"
+                        x:Name="Back"
+                        Clicked="Back_Clicked"/>
+
+
+
+
+            </StackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

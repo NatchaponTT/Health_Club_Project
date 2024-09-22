@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout>
+        <Grid HeightRequest="2000">
+
+            <StackLayout>
+                <Label Margin="20"
+                  Text="Login"
+                  FontSize="30"
+                  FontAutoScalingEnabled="False"
+                  VerticalOptions="Start"
+              HorizontalOptions="Center"/>
+                <Frame Margin="10" Padding="5"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   CornerRadius="75">
+                    <Image
+                    Aspect="Fill"
+                    Source="arm_muscle.png"/>
+                </Frame>
+
+                <Entry Margin ="20"
+                    IsSpellCheckEnabled="True"
+                    IsTextPredictionEnabled="True"
+                     ClearButtonVisibility="WhileEditing"
+                     WidthRequest ="200"
+                      Placeholder ="Enter Username"/>
+                <Entry Margin ="20"
+                   MaxLength="10"
+                   IsPassword="True"
+                   IsSpellCheckEnabled="False"
+                   IsTextPredictionEnabled="False"
+                   WidthRequest ="200"
+                   Placeholder ="Enter Password"/>
+                <Button Margin="10"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        Text="Login"
+                        Clicked="btnlogin_Clicked"/>
+                <Button Margin="10"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        Text="Register"
+                        Clicked="Button_Clicked"/>
+
+
+            </StackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

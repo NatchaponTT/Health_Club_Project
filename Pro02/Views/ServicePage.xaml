@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.ServicePage"
+             BackgroundColor="White">
+    <Grid RowSpacing="10" RowDefinitions="auto,*">
+        <Picker x:Name="pickerTypeMovie"
+                Title="What type of exercise do you like?"
+                TitleColor="Maroon"
+                ItemsSource="{Binding MovieTypes}"
+                ItemDisplayBinding="{Binding .}"
+                SelectedIndexChanged="pickerTypeMovie_SelectedIndexChanged"/>
+        <CollectionView Grid.Row="1" Margin="10,10,15,10" SelectionMode="Single"
+                SelectionChanged="CollectionView_SelectionChanged"
+                ItemsSource="{Binding Movies}"
+                Background="White" >
+            <CollectionView.Header>
+                <StackLayout Margin="10" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Exercise List "
+                   FontSize="20" HorizontalOptions="Center" BackgroundColor="Wheat"
+                   TextColor="Maroon" FontAttributes="Bold"/>
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="5" Padding="5" Background="Wheat" >
+                        <Grid Padding="5" ColumnSpacing="5" RowDefinitions="Auto,*" ColumnDefinitions="Auto,*">
+                            <Image Source="{Binding thumbnail_url}"
+                           HeightRequest="80"
+                           WidthRequest="100"
+                           Grid.RowSpan="2"
+                           VerticalOptions="Start"/>
+                            <Label Text="{Binding title}"
+                           Grid.Column="1"
+                           TextColor="Maroon"
+                           LineBreakMode="WordWrap"
+                           FontAttributes="Bold"
+                           FontSize="Subtitle"/>
+                            <Label Text="{Binding author_name}"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           TextColor="SlateGray"
+                           FontSize="Small"
+                           VerticalOptions="End"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

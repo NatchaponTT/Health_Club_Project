@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.SummaryPage">
+    <VerticalStackLayout>
+        <Grid HeightRequest="2000">
+
+            <StackLayout>
+                <Frame Margin="10" Padding="0"
+                       WidthRequest="500"
+                       HeightRequest="675">
+                    <Button Margin="10"
+                            HeightRequest="40"
+                            WidthRequest="100"
+                            Text="Logout"
+                            Clicked="Button_Clicked"
+                            BackgroundColor="Red"
+                            VerticalOptions="End"/>
+                </Frame>
+                
+            </StackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

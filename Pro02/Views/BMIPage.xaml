@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.BMIPage"
+             BackgroundColor="DarkGray">
+    <VerticalStackLayout Margin="10" Spacing="10" VerticalOptions="Center">
+        <Label 
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="BMI Calculator"
+            TextColor="White"
+            FontAttributes="Bold"/>
+        <Entry BackgroundColor="Gray" 
+               Placeholder="Weight" 
+               PlaceholderColor="White"
+               x:Name="Weight"
+               Keyboard="Numeric"/>
+        <Entry BackgroundColor="Gray" 
+               Placeholder="Height" 
+               PlaceholderColor="White"
+               x:Name="Height"
+               Keyboard="Numeric"/>
+        <Entry BackgroundColor="Gray" 
+               Placeholder="Your BMI" 
+               PlaceholderColor="White"
+               x:Name="BMI"
+               IsEnabled="False"/>
+        <Button Margin="10" Text="Calculator" Clicked="Button_Clicked"/>
+        <Button Margin="10" Text="Back" Clicked="Button_Clicked_1" BackgroundColor="Gray"/>
+
+    </VerticalStackLayout>
+</ContentPage>

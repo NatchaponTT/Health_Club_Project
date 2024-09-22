@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Pro02.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Pro02.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:ServicePage}"
+            Route="ServicePage" >
+            <ShellContent.Icon>
+            <FontImageSource Glyph="&#xf015;"
+                         FontFamily="AwesomeSolid"
+                         Color="Black"/>
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent
+            Title="Profile"
+            ContentTemplate="{DataTemplate local:ProfilePage}"
+            Route="ProfilePage">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf0c0;"
+                                     FontFamily="AwesomeSolid"
+                                     Color="Black"/>
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent
+             Title="Setting"
+             ContentTemplate="{DataTemplate local:SummaryPage}"
+             Route="SummaryPage" >
+            <ShellContent.Icon>
+                <FontImageSource Glyph="&#xf085;"
+                         FontFamily="AwesomeSolid"
+                         Color="Black"/>
+            </ShellContent.Icon>
+
+        </ShellContent>
+
+        
+    </FlyoutItem>
+    
+
+    <ShellContent
+        Title="Login"
+        IsVisible="False"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LogoutPage" />
+
+    <ShellContent
+        Title="Register"
+        IsVisible="False"
+        ContentTemplate="{DataTemplate local:NewsPage}"
+        Route="NewsPage" />
+
+    <ShellContent
+        Title="BMI Calculator"
+        IsVisible="False"
+        ContentTemplate="{DataTemplate local:BMIPage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+    Title="NotePage"
+    IsVisible="False"
+    ContentTemplate="{DataTemplate local:NotePage}"
+    Route="NotePage" />
+
+
+
+</Shell>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pro02.Views.ProfilePage">
+    <VerticalStackLayout>
+        <Grid HeightRequest="2000">
+            <StackLayout>
+                <Label Margin="20,30,20,25"
+                       FontSize="30"
+                       FontAutoScalingEnabled="False"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"/>
+                <Frame Margin="5" Padding="0"
+                       WidthRequest="300"
+                       HeightRequest="300"
+                       CornerRadius="150">
+                    <Image Aspect="AspectFit" Source="man_22007.png"/>
+                </Frame>
+                <Label Margin="20"
+                       Text="Natchapon sinthong"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       FontSize="30"
+                       FontAttributes="Bold"/>
+                <Button Text="Note" Margin="20"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        Clicked="Button_Clicked"/>
+                <Button Margin="10"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        Text="BMI"
+                        Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
